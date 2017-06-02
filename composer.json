@@ -1,0 +1,32 @@
+{
+  "name": "dadeky/print",
+  "description": "Library for printing stuff.",
+  "authors": [
+    {
+      "name": "Darko Dvorski",
+      "email": "dadeky@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/dadeky/print",
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "print services"
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Print\\": "src/Print"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Print\\Tests\\": "tests/Print/Tests"
+    }
+  }
+}
