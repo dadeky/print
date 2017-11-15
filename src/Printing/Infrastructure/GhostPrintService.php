@@ -5,7 +5,7 @@ use Printing\Domain\PrintService;
 
 class GhostPrintService extends PrintService
 {
-	const COMMAND_STRING = '%1$S -printer "%3$S" "%2$S"';
+	const COMMAND_STRING = '%1$s -printer "%3$s" "%2$s"';
 	const SERVICE_NAME = 'GHOST';
 
 	protected function getCommandString()
