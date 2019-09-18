@@ -16,12 +16,16 @@ abstract class PrintService
 	 * Prints a file
 	 * @param string $file Full path and filename
 	 * @param string $printerName
+	 * @param bool $keepFile
 	 */
-	public function printFile($file, $printerName)
+	public function printFile($file, $printerName, $keepFile = false)
 	{
 		$command = sprintf($this->getCommandString(), $this->getExecutable(), $file, $printerName);
 		shell_exec( $command);
-		(new Filesystem())->remove($file);
+		
+		if (!$keepFile) {
+		    (new Filesystem())->remove($file);
+		}
 	}
 	
 	private function getExecutable()
